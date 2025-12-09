@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 10px 15px -3px rgba(0, 0, 0, 0.05),
+        0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.des {
+    font-size: 14px;
+    color: #666;
+}
+
+#currency {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    margin-bottom: 25px;
+    cursor: pointer;
+    background-color: #f9fafb;
+    transition: border-color 0.2s;
+}
+
+#currency:focus {
+    border-color: #60a5b9;
+    outline: none;
+}
+
+.mode {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    background: #f5f7fa;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.Amount, .Monthly, .Cost {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.Amount:hover, .Monthly:hover, .Cost:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+}
+
+/* Active state simulation - ideally would use a class in JS */
+.Monthly { /* Default active for now, JS needs to toggle active class */
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    color: #000;
+}
+
+.amount-sel {
+    margin-bottom: 30px;
+}
+
+.label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+
+.input-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#loan-range, #rate-range, #term-range {
+    flex: 1;
+    height: 6px;
+    accent-color: #60a5b9;
+    cursor: pointer;
+}
+
+
+
+#loan-input, #rate-input, #term-input {
+    width: 110px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+    font-family: inherit;
+    color: #333;
+    transition: border-color 0.2s;
+}
+
+#loan-input:focus, #rate-input:focus, #term-input:focus {
+    border-color: #60a5b9;
+    outline: none;
+}
+
+.result {
+    background: linear-gradient(135deg, #60a5b9 0%, #4a90a4 100%);
+    padding: 25px;
+    border-radius: 16px;
+    margin: 30px 0;
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 10px 15px -3px rgba(96, 165, 185, 0.3), 
+        0 4px 6px -2px rgba(96, 165, 185, 0.1);
+}
+
+.result-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.result-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+}
+
+.stats {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+
+.mon, .total, .I-cost {
+    flex: 1;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.mon-label, .total-label, .I-label {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.mon-value, .total-value, .I-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.mon:hover, .total:hover, .I-cost:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    border-color: #cbd5e1;
+    background: white;
+}
